@@ -11,21 +11,26 @@ height: 100%;
 -o-background-size: cover;
 background-size: cover;
 background-repeat:no-repeat;
-background: rgb(165,151,196);
-background: radial-gradient(circle, rgba(134,166,166,1) 0%, rgba(93,115,115,1) 100%);
+background: rgb(175,175,185,0.4);
+background: radial-gradient(circle, rgba(115,115,125,0.6) 0%, rgba(25,25,85,0.6) 50%, rgba(50,50,85,1) 100%);
+}
+
+body {
+	height: 70%;
+	widht: 100%;
 }
 
 h1 {
-font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
 font-size: 32px;
 line-height: 48px;
-background: radial-gradient(circle, rgba(62,56,64,0.8) 0%, rgba(37,33,38,1) 100%);
+background: radial-gradient(circle, rgba(242,242,242,0.8) 0%, rgba(218,218,218,1) 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
 
 h2,h3,h4 {
-font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
 }
 
 h2 {
@@ -41,6 +46,7 @@ height: 5px;
 border-style: outset; 
 border-color: #f9f5fc; 
 width: 100%;
+background-color: rgba(37,33,38,0.3);
 } 
 
 a {
@@ -65,7 +71,7 @@ left: 0;
 top: 0;
 width: 100%;
 text-align: left;
-background: rgba(37,33,38,0.8);
+background: rgba(37,33,38,0.3);
 #color: #edf0fa;
 }
 
@@ -76,9 +82,12 @@ display: flex;
 
 img.logo {
 display: inline-block;
-height: 200px;
+background: rgb(255,255,255,0.0);
+background: radial-gradient(circle, rgba(200,200,200,0.8) 0%, rgba(150,150,150,0.4) 20%, rgba(100,100,100,0) 40%);
+align-self: center;
+height: 150px;
 padding-left: 10px;
-padding-top: 5px;
+padding-top: 10px;
 }
 
 div.title {
@@ -88,24 +97,22 @@ width: 100%;
 }
 
 div.title h1 {
-font-family: 'Serif', serif;
+font-family: 'Montserrat', sans-serif;
 font-size: 160px;
-line-height: 140px;
+line-height: 200px;
 text-align: justify;
-padding-left: 38px;
-margin: 0px;
-background: linear-gradient(180deg, rgba(237, 240, 250,0.8) 0%, rgba(165,151,196,0.0) 100%);
+align-self: center;
+margin: auto;
+background: linear-gradient(180deg, rgba(242,242,242,0.8) 0%, rgba(138,138,138,1) 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
 
 div.title p {
-font-family: 'Serif', serif;
-font-style: italic;
-margin: 0px;
+font-family: 'Oswald', sans-serif;
+margin: auto;
 font-size: 20px;
-line-height: 22px;
-padding-left: 38px;
+line-height: 15px;
 color: #edf0fa;
 text-align: center;
 }
@@ -121,7 +128,7 @@ left: 0;
 bottom: 0;
 width: 100%;
 text-align: center;
-background: linear-gradient(180deg, rgba(165,151,196,0.0) 0%, rgba(37,33,38, 0.8) 20%)
+background: linear-gradient(180deg, rgba(165,151,196,0.0) 0%, rgba(37,33,38, 0.4) 20%)
 }
 
 footer p, footer a {
@@ -134,19 +141,55 @@ color: #edf0fa;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .flex-container div {
+	position: relative;
 	width: 100%;
 	align-self: stretch;
 	color: #edf0fa;
-	background: rgba(37,33,38,0.8);
+	background: rgba(37,33,38,0.4);
 	padding: 10px;
 	margin: 5px;
 }
 
+.flex-container div h1 {
+	text-align: center;
+}
+
 .flex-container div p {
 	color: #edf0fa;
+}
+
+.flex-container .button {
+	position: absolute;
+	width: 85%;
+	height: 75px;
+	background-color: rgba(37,33,38,0.4);
+	bottom: 10px;
+	right: 0;
+	left: 0;
+	text-align: center;
+	font-size: 14px;
+	margin: auto;
+	padding: 2px;
+	vertical-align: bottom;
+	text-decoration: none;
+}
+
+.flex-container .button:hover {
+-webkit-transition: background-color .5s ease-out;
+-moz-transition: background-color .5s ease-out;
+-o-transition: background-color .5s ease-out;
+transition: background-color .5s ease-out;
+-webkit-transition: color .5s ease-out;
+-moz-transition: color .5s ease-out;
+-o-transition: color .5s ease-out;
+transition: color .5s ease-out;
+background-color: #edf0fa;
+color: rgba(37,33,38,1);
 }
 
 .topnav {
@@ -181,16 +224,62 @@ color: rgba(37,33,38,1);
   color: white;
 }
 
-@import { 
-@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans|Open+Sans&display=swap');
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-	
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFW50bbck.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v29/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUhiZTaR.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v29/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiZQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@import { 
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Oswald&display=swap');
+}
 @media all and (max-width: 500px) {
   .navigation {
     flex-direction: column;
   }
 }
-
 @media all and (max-width: 800px) {
   .navigation {
     justify-content: space-around;
