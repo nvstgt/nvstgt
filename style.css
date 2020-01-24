@@ -58,11 +58,11 @@ color: #edf0fa;
 }
 
 a:hover {
-color: rgba(115,36,57,0.8);
+color: rgba(235,215,25,0.8);
 }
 
 p{
-color: rgba(37,33,38,1);
+color: #edf0fa;
 }
 
 header{
@@ -119,6 +119,7 @@ text-align: center;
 
 ul {
 list-style-type:disc;
+color: #edf0fa;
 }
 
 footer{
@@ -194,7 +195,7 @@ color: rgba(37,33,38,1);
 
 .topnav {
   overflow: hidden;
-  background-color: rgba(37,33,38,0.8);
+  background-color: rgba(37,33,38,0.6);
   position: relative;
 }
 
@@ -216,7 +217,7 @@ transition: background-color .5s ease-out;
 -o-transition: color .5s ease-out;
 transition: color .5s ease-out;
 background-color: #edf0fa;
-color: rgba(37,33,38,1);
+color: rgba(37,33,38,0.8);
 }
 
 .active {
